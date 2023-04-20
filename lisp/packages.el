@@ -14,8 +14,11 @@
 (package-initialize)
 
 (defvar my-packages
-  '(flycheck
-    magit)
+  '(eglot
+    flycheck
+    magit
+    tree-sitter
+    tree-sitter-langs)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()
