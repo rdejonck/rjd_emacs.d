@@ -1,0 +1,46 @@
+;;; init.el --- rjd Emacs configuration
+
+;;; Commentary:
+
+;; Borrows from Mastering Emacs, Emacs Prelude
+
+;;; License:
+
+;;; Code:
+
+(defvar root-dir (file-name-directory load-file-name)
+  "The root of the Emacs configuration directory tree")
+(defvar lisp-dir (expand-file-name "lisp" root-dir)
+  "Directory for custom lisp that defines the configuration")
+
+;; Keep all automatically generated save & history files in one location
+(defvar savefile-dir (expand-file-name "savefile" user-emacs-directory)
+  "Directory to store all the automatically generated save / history files")
+(unless (file-exists-p savefile-dir)
+  (make-directory savefile-dir))
+
+;; setup load paths
+(add-to-list 'load-path lisp-dir)
+
+;; reduce the frequency of garbage collection by making it happen on each
+;; 50MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 50000000)
+
+;; warn when opening files larger than 100MB
+(setq large-file-warning-threshold 100000000)
+
+;; Load my configuration
+(require 'basic-ui)
+(require 'modeline)
+
+;; OS specific configurations should use a block that looks like this
+(when (eq system-type 'gnu/linux)
+  (require 'os-linux))
+(when (and (eq system-type 'gnu/linux) (getenv "WSLENV"))
+  (require 'os-wsl))
+(when (eq system-type 'windows-nt)
+  (require 'os-windows))
+
+;; config changes made through the customize UI will be stored here
+(setq custom-file (expand-file-name "custom.el" root-dir))
+
