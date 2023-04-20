@@ -11,13 +11,13 @@
 					;(package-initialize)
 
 (defvar root-dir (file-name-directory load-file-name)
-  "The root of the Emacs configuration directory tree")
+  "The root of the Emacs configuration directory tree.")
 (defvar lisp-dir (expand-file-name "lisp" root-dir)
-  "Directory for custom lisp that defines the configuration")
+  "Directory for custom Lisp that defines the configuration.")
 
 ;; Keep all automatically generated save & history files in one location
 (defvar savefile-dir (expand-file-name "savefile" user-emacs-directory)
-  "Directory to store all the automatically generated save / history files")
+  "Directory to store all the automatically generated save / history files.")
 (unless (file-exists-p savefile-dir)
   (make-directory savefile-dir))
 
@@ -61,3 +61,5 @@
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" root-dir))
 
+(provide 'init)
+;;; init.el ends here
