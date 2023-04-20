@@ -41,6 +41,17 @@
 (when (eq system-type 'windows-nt)
   (require 'os-windows))
 
+;; Configuration for individual major modes
+(require 'mode-functions)
+
+;; Broad families of modes
+(require 'text-modes)
+(require 'prog-modes)
+
+;; Configuration for language specific major modes
+(require 'lang-python)
+(require 'lang-asciidoc)
+
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" root-dir))
 
