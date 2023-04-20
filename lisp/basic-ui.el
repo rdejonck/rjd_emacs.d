@@ -31,5 +31,17 @@
 ;; hilight the current line
 (global-hl-line-mode +1)
 
+;; Theme control
+;;(setq zenburn-override-colors-alist
+;;      '(("zenburn-green" . "#9fc59f")))
+
+
+;; Use scaled headings for some headings and titles
+(setq zenburn-use-variable-pitch t)
+(setq zenburn-scale-org-headlines t)
+(setq zenburn-scale-outline-headlines t)
+
+(load-theme 'zenburn t)
+
 (provide 'basic-ui)
 ;;; basic-ui.el ends here

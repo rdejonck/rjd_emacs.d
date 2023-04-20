@@ -7,7 +7,6 @@
 
 ;;; Code:
 (add-hook 'text-mode-hook 'enable-spell-check)
-(add-hook 'text-mode-hook 'enable-whitespace-control)
 
 (provide 'text-modes)
 ;;; text-modes.el ends here
