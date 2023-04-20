@@ -8,6 +8,8 @@
 
 ;;; Code:
 
+					;(package-initialize)
+
 (defvar root-dir (file-name-directory load-file-name)
   "The root of the Emacs configuration directory tree")
 (defvar lisp-dir (expand-file-name "lisp" root-dir)
@@ -29,6 +31,9 @@
 ;; warn when opening files larger than 100MB
 (setq large-file-warning-threshold 100000000)
 
+;; Load all elpa packages
+(require 'packages)
+
 ;; Load my configuration
 (require 'basic-ui)
 (require 'modeline)
@@ -49,6 +54,7 @@
 (require 'prog-modes)
 
 ;; Configuration for language specific major modes
+(require 'lang-elisp)
 (require 'lang-python)
 (require 'lang-asciidoc)
 
