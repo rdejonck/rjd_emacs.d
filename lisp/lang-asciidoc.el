@@ -5,6 +5,7 @@
 ;;; License:
 
 ;;; Code:
+(whitespace-mode -1)
 
 (provide 'lang-asciidoc)
 ;;; lang-asciidoc.el ends here

@@ -14,7 +14,8 @@
 (package-initialize)
 
 (defvar my-packages
-  '(eglot
+  '(adoc-mode
+    eglot
     flycheck
     magit
     tree-sitter
