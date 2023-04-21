@@ -20,8 +20,7 @@
     magit
     minimap
     tree-sitter
-    tree-sitter-langs
-    zenburn-theme)
+    tree-sitter-langs)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()

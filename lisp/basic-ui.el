@@ -32,8 +32,9 @@
 (global-hl-line-mode +1)
 
 ;; Theme control
-;;(setq zenburn-override-colors-alist
-;;      '(("zenburn-green" . "#9fc59f")))
+(require 'zenburn-theme)
+(setq zenburn-override-colors-alist
+      '(("zenburn-green" . "#9fc59f")))
 
 
 ;; Use scaled headings for some headings and titles
