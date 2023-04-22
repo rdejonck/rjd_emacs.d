@@ -9,7 +9,7 @@
 (require 'package)
 
 (add-to-list 'package-archives
-	     '("melpa-stable" . "https://stable.melpa.org/packages/"))
+	     '("melpa" . "https://melpa.org/packages/") t)
 (setq package-user-dir (expand-file-name "elpa" root-dir))
 (package-initialize)
 
