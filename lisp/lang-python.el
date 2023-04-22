@@ -12,5 +12,7 @@
 ;;     $ pip install "python-lsp-server[all]
 (add-hook 'python-mode-hook 'eglot-ensure)
 
+(require 'smartparens-python)
+
 (provide 'lang-python)
 ;;; lang-python.el ends here

@@ -62,6 +62,7 @@
 (require 'lang-asciidoc)
 (require 'lang-elisp)
 (require 'lang-python)
+(require 'lang-shell_script)
 (require 'lang-yaml)
 
 ;; config changes made through the customize UI will be stored here

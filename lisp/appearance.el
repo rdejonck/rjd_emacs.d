@@ -9,6 +9,11 @@
 ;; Do not display the initial splash screen
 (setq inhibit-startup-screen t)
 
+;; Scrolling setup
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
+
 ;; No toolbar
 (tool-bar-mode -1)
 

@@ -9,6 +9,7 @@
 (add-hook 'prog-mode-hook 'enable-spell-check)
 ;(add-hook 'prog-mode-hook 'enable-whitespace-control)
 (add-hook 'prog-mode-hook 'flycheck-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 ;; Prefer tree-sitter over font-lock-mode for syntax hilighting
 (global-tree-sitter-mode)
@@ -31,6 +32,11 @@
 (setq highlight-indent-guides-bitmap-function
       'highlight-indent-guides--bitmap-line)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
+;; Stylize annotations like TODO in sourcecode
+(require 'hl-todo)
+(global-hl-todo-mode 1)
+
 
 (provide 'prog-modes)
 ;;; prog-modes.el ends here

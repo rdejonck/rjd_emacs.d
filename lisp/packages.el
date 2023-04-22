@@ -18,8 +18,12 @@
     company
     eglot
     flycheck
+    hl-todo
     magit
     minimap
+    rainbow-mode
+    rainbow-delimiters
+    smartparens
     tree-sitter
     tree-sitter-langs
     typescript-mode

@@ -56,6 +56,47 @@
 ;; Automatically update the saved file rather than creating '#...' autosave files
 (auto-save-visited-mode 1)
 
+;; saveplace remembers your location in a file when saving files
+(setq save-place-file (expand-file-name "saveplace" saves-dir))
+(save-place-mode 1)
+
+;; savehist keeps track of some edit history
+(require 'savehist)
+(setq savehist-additional-variables
+      ;; search entries
+      '(search-ring regexp-search-ring)
+      ;; save every minute
+      savehist-autosave-interval 60
+      ;; keep the history with other backups
+      savehist-file (expand-file-name "savehist" saves-dir))
+(savehist-mode +1)
+
+;; save recent files
+(require 'recentf)
+(setq recentf-save-file (expand-file-name "recentf" saves-dir)
+      recentf-max-saved-items 500
+      recentf-max-menu-items 15
+      ;; disable recentf-cleanup on Emacs start because it can cause problems
+      ;; with remote files (according to Bozhidar Batsov)
+      recentf-auto-cleanup 'never)
+(recentf-mode +1)
+
+;; bookmarks
+(require 'bookmark)
+(setq bookmark-default-file (expand-file-name "bookmarks" saves-dir)
+      bookmark-save-flag 1)
+
+;; use shift + arrow keys to switch between visible buffers
+(require 'windmove)
+(windmove-default-keybindings)
+
+;; Make meaningful unique buffer names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+;;(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "/")
+(setq uniquify-after-kill-buffer-p t)    ; rename after killing uniquified buffers
+(setq uniquify-ignore-biffers-re "^\\*") ; Do not uniquify special buffers
 
 (require 'yasnippet)
 (yas-global-mode 1)
