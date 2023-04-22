@@ -22,11 +22,7 @@
 (global-display-line-numbers-mode)
 
 ;; Show either the filename or the buffer name in the title bar
-(setq frame-title-format
-      '("" invocation-name ": "
-	(:eval (if (buffer-file-name)
-		   (abbreviate-file-name (buffer-file-name))
-		 %b))))
+b(setq frame-title-format '("" invocation-name ": " "%b"))
 
 ;; hilight the current line
 (global-hl-line-mode +1)
