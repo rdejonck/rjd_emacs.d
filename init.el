@@ -2,9 +2,11 @@
 
 ;;; Commentary:
 
+
 ;; Borrows from Mastering Emacs, Emacs Prelude
 
 ;;; License:
+
 
 ;;; Code:
 
@@ -18,10 +20,10 @@
   "Directory for executables & scripts used by emacs.")
 
 ;; Keep all automatically generated save & history files in one location
-(defvar savefile-dir (expand-file-name "savefile" user-emacs-directory)
+(defvar saves-dir (expand-file-name "saves" user-emacs-directory)
   "Directory to store all the automatically generated save / history files.")
-(unless (file-exists-p savefile-dir)
-  (make-directory savefile-dir))
+(unless (file-exists-p saves-dir)
+  (make-directory saves-dir))
 
 ;; setup load paths
 (add-to-list 'load-path lisp-dir)
@@ -38,7 +40,7 @@
 (require 'packages)
 
 ;; Load my configuration
-(require 'basic-ui)
+(require 'appearance)
 (require 'modeline)
 
 ;; OS specific configurations should use a block that looks like this
@@ -50,10 +52,9 @@
   (require 'os-windows))
 
 ;; Configuration for individual major modes
-(require 'mode-functions)
+(require 'behavior)
 
 ;; Broad families of modes
-(require 'all-modes)
 (require 'text-modes)
 (require 'prog-modes)
 

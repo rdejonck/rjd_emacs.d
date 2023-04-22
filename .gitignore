@@ -1,5 +1,7 @@
 eln-cache/
 auto-save-list/
 *~
+saves/
+snippets/
 transient/
 *.elc

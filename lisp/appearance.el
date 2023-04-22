@@ -1,4 +1,4 @@
-;;; basic-ui.el --- Basic Emacs frame configuration
+;;; appearance.el --- Visual elements of the editor
 
 ;;; Commentary:
 
@@ -15,14 +15,14 @@
 ;; No menu bar
 ;(menu-bar-mode -1)
 
-;; enable y/n answers
-(fset 'yes-or-no-p 'y-or-n-p)
+;; Control the frame width so there is room for 80 characters and the minimap
+(add-to-list 'initial-frame-alist '(width . 100))
 
 ;; Default to displaying line numbers on the left of the buffer
 (global-display-line-numbers-mode)
 
 ;; Show either the filename or the buffer name in the title bar
-b(setq frame-title-format '("" invocation-name ": " "%b"))
+(setq frame-title-format '("" invocation-name ": " "%b"))
 
 ;; hilight the current line
 (global-hl-line-mode +1)
@@ -40,5 +40,5 @@ b(setq frame-title-format '("" invocation-name ": " "%b"))
 
 (load-theme 'zenburn t)
 
-(provide 'basic-ui)
-;;; basic-ui.el ends here
+(provide 'appearance)
+;;; appearance.el ends here

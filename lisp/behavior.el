@@ -1,10 +1,14 @@
-;;; mode-functions.el --- Functions to dis-/en-able features per major mode
+;;; behavior.el --- Manage how the editor functions
 
 ;;; Commentary:
+;; Functions to dis-/en-able features per major mode
 
 ;;; License:
 
 ;;; Code:
+
+;; enable y/n answers
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; For spell-checking while you type
 (require 'flyspell)
@@ -42,5 +46,24 @@
   (add-hook 'before-save-hook 'whitespace-cleanup)
   (whitespace-mode +1))
 
-(provide 'mode-functions)
-;;; mode-functions.el ends here
+;; Consolidate backup and auto-save files
+(setq backup-directory-alist `(("" . ,saves-dir)))
+(setq backup-by-copying t
+      delete-old-versions t
+      kept-new-versions 10
+      kept-old-versions 0
+      version-control t)
+;; Automatically update the saved file rather than creating '#...' autosave files
+(auto-save-visited-mode 1)
+
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(setq company-tooltip-align-annotations t)
+(setq company-tooltip-flip-when-above t)
+(setq company-format-margin-function #'company-vscode-dark-icons-margin)
+(add-hook 'after-init-hook 'global-company-mode)
+
+(provide 'behavior)
+;;; behavior.el ends here
