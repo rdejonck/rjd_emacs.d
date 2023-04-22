@@ -20,7 +20,9 @@
     magit
     minimap
     tree-sitter
-    tree-sitter-langs)
+    tree-sitter-langs
+    typescript-mode
+    yaml-mode)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()

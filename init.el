@@ -14,6 +14,8 @@
   "The root of the Emacs configuration directory tree.")
 (defvar lisp-dir (expand-file-name "lisp" root-dir)
   "Directory for custom Lisp that defines the configuration.")
+(defvar bin-dir (expand-file-name "bin" root-dir)
+  "Directory for executables & scripts used by emacs.")
 
 ;; Keep all automatically generated save & history files in one location
 (defvar savefile-dir (expand-file-name "savefile" user-emacs-directory)
@@ -23,6 +25,7 @@
 
 ;; setup load paths
 (add-to-list 'load-path lisp-dir)
+(add-to-list 'exec-path bin-dir)
 
 ;; reduce the frequency of garbage collection by making it happen on each
 ;; 50MB of allocated data (the default is on every 0.76MB)
@@ -54,9 +57,10 @@
 (require 'prog-modes)
 
 ;; Configuration for language specific major modes
+(require 'lang-asciidoc)
 (require 'lang-elisp)
 (require 'lang-python)
-(require 'lang-asciidoc)
+(require 'lang-yaml)
 
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" root-dir))

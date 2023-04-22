@@ -24,5 +24,13 @@
 (setq minimap-width-fraction 0.10)
 (minimap-mode 1)
 
+;; Display indentation levels
+(require 'highlight-indent-guides)
+(setq highlight-indent-guides-method 'bitmap)
+(setq highlight-indent-guides-responsive 'stack)
+(setq highlight-indent-guides-bitmap-function
+      'highlight-indent-guides--bitmap-line)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+
 (provide 'prog-modes)
 ;;; prog-modes.el ends here
