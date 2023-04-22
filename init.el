@@ -53,6 +53,7 @@
 (require 'mode-functions)
 
 ;; Broad families of modes
+(require 'all-modes)
 (require 'text-modes)
 (require 'prog-modes)
 

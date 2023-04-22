@@ -15,6 +15,7 @@
 
 (defvar my-packages
   '(adoc-mode
+    company
     eglot
     flycheck
     magit
