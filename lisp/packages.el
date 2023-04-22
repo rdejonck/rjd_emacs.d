@@ -23,7 +23,8 @@
     tree-sitter
     tree-sitter-langs
     typescript-mode
-    yaml-mode)
+    yaml-mode
+    yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 (defun my-packages-installed-p ()

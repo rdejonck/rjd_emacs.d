@@ -1,6 +1,9 @@
 ;;; all-modes.el --- Features common to all major modes
 
 ;;; Code:
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (setq company-tooltip-align-annotations t)
 (setq company-tooltip-flip-when-above t)
 (setq company-format-margin-function #'company-vscode-dark-icons-margin)

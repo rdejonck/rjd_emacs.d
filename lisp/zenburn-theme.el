@@ -625,6 +625,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(egg-diff-file-header ((t (:foreground ,zenburn-yellow-2))))
    `(egg-section-title ((t (:foreground ,zenburn-yellow))))
    `(egg-stash-mono ((t (:foreground ,zenburn-green+4))))
+;;;;; eglot
+   `(eglot-highlight-symbol-face ((t (:background ,zenburn-bg+3))))
 ;;;;; elfeed
    `(elfeed-log-error-level-face ((t (:foreground ,zenburn-red))))
    `(elfeed-log-info-level-face ((t (:foreground ,zenburn-blue))))
