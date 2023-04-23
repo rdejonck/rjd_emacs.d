@@ -62,6 +62,7 @@
 (require 'lang-asciidoc)
 (require 'lang-dockerfile)
 (require 'lang-elisp)
+(require 'lang-markdown)
 (require 'lang-python)
 (require 'lang-shell_script)
 (require 'lang-yaml)

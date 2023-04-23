@@ -23,6 +23,7 @@
     hl-todo
     ivy
     magit
+    markdown-mode
     minimap
     minions
     rainbow-mode
