@@ -23,6 +23,7 @@
     ivy
     magit
     minimap
+    minions
     rainbow-mode
     rainbow-delimiters
     smartparens

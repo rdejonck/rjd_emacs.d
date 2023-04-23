@@ -13,5 +13,7 @@
 (require 'which-func)
 (which-function-mode 1)
 
+(minions-mode)
+
 (provide 'modeline)
 ;;; modeline.el ends here
