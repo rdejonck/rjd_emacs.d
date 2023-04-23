@@ -22,6 +22,7 @@
 
 ;; Control the frame width so there is room for 80 characters and the minimap
 (add-to-list 'initial-frame-alist '(width . 100))
+(add-to-list 'default-frame-alist '(width . 100))
 
 ;; Default to displaying line numbers on the left of the buffer
 (global-display-line-numbers-mode)
