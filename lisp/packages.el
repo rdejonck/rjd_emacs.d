@@ -17,6 +17,7 @@
   '(adoc-mode
     company
     counsel
+    dockerfile-mode
     eglot
     flycheck
     hl-todo

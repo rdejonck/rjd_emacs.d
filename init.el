@@ -60,6 +60,7 @@
 
 ;; Configuration for language specific major modes
 (require 'lang-asciidoc)
+(require 'lang-dockerfile)
 (require 'lang-elisp)
 (require 'lang-python)
 (require 'lang-shell_script)

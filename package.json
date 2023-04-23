@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@ansible/ansible-language-server": "^1.0.2",
+    "dockerfile-language-server-nodejs": "^0.5.0",
     "yaml-language-server": "^1.10.0"
   }
 }
