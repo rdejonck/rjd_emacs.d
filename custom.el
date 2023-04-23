@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(hl-todo yasnippet yaml-mode typescript-mode tree-sitter-langs smartparens rainbow-mode rainbow-delimiters minimap magit flycheck eglot company adoc-mode)))
+   '(counsel yasnippet yaml-mode typescript-mode tree-sitter-langs smartparens rainbow-mode rainbow-delimiters minimap magit ivy hl-todo flycheck eglot company adoc-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

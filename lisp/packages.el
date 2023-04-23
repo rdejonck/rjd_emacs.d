@@ -16,14 +16,17 @@
 (defvar my-packages
   '(adoc-mode
     company
+    counsel
     eglot
     flycheck
     hl-todo
+    ivy
     magit
     minimap
     rainbow-mode
     rainbow-delimiters
     smartparens
+    swiper
     tree-sitter
     tree-sitter-langs
     typescript-mode
