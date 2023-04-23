@@ -33,6 +33,10 @@
 ;; hilight the current line
 (global-hl-line-mode +1)
 
+;; Display a guide at the fill column
+(global-display-fill-column-indicator-mode)
+(setq-default indicate-buffer-boundaries 'right)
+
 ;; Theme control
 (require 'zenburn-theme)
 (setq zenburn-override-colors-alist

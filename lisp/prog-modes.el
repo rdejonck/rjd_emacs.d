@@ -37,6 +37,15 @@
 (require 'hl-todo)
 (global-hl-todo-mode 1)
 
+(defun prog-fill-setup ()
+  ;; Setup long line handling. Indicate the fill column and manage wrapping
+  (set-fill-column 80) ; draw a line a column 80
+  (setq truncate-lines t) ; don't wrap long lines, let them go off the edge
+  ;; horizontally scroll long lines independently of the rest of the buffer
+  (setq auto-hscroll-mode 'current-line))
+
+
+(add-hook 'prog-mode-hook 'prog-fill-setup)
 
 (provide 'prog-modes)
 ;;; prog-modes.el ends here
